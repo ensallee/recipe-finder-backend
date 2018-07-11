@@ -4,4 +4,6 @@ Rails.application.routes.draw do
 
   get '/users/:id/recipes', to: 'users#recipe_lists'
 
+  get '/save-recipe', to: 'recipe_lists#save'
+
 end
