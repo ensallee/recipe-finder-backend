@@ -36,11 +36,4 @@ class ApplicationController < ActionController::API
     JWT.encode payload, secret_key(), 'HS256'
   end
 
-
-  # def authenticate
-  #   begin
-  #     if (decoded_token())
-  #       render json:
-  #     end
-  # end
 end
