@@ -3,12 +3,12 @@ class RecipeListsController < ApplicationController
 
   def save
     id = decoded_token[0]['id']
-
+    
     @user = User.find_by(id: id)
     @recipe = Recipe.create(recipe_params)
 
     if (@user && @recipe)
-      @user.recipes << recipe
+      @user.recipes << @recipe
       render json: {
         message: "saved"
       }, status: :ok

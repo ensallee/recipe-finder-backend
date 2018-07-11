@@ -30,7 +30,11 @@ class UsersController < ApplicationController
   end
 
   def recipe_lists
-    @user = User.find_by(id: params[:id])
+    # @user = User.find_by(id: params[:id])
+    # render json: @user.recipes
+    id = decoded_token[0]['id']
+
+    @user = User.find_by(id: id)
     render json: @user.recipes
   end
 
