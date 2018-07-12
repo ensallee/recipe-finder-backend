@@ -1,3 +1,11 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  resources :users, only: [:index, :show, :create]
+  resources :sessions, only: [:create]
+
+  # get '/users/:id/recipes', to: 'users#recipe_lists'
+
+  get '/my-recipes', to: 'users#recipe_lists'
+
+  post '/save-recipe', to: 'recipe_lists#save'
+
 end
