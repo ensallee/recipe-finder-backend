@@ -3,7 +3,7 @@ class RecipeListsController < ApplicationController
 
   def save
     id = decoded_token[0]['id']
-    
+
     @user = User.find_by(id: id)
     @recipe = Recipe.create(recipe_params)
 

@@ -6,10 +6,4 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-mblev = User.create(username: 'mblev', password: 'password', display_name: 'Michelle B.')
-ensallee = User.create(username: 'ensallee', password: 'password', display_name: 'Betsy S.')
-rotoole = User.create(username: 'rotoole', password: 'password', display_name: "Ryan O.")
-
-recipe1 = Recipe.create(label: 'Stir Fry', source: 'My Brain', image: 'http://via.placeholder.com/350x150', ingredients: 'tofu, peppers, onions, mushrooms')
-
-ensallee.recipes << recipe1
+guest = User.create(username: 'Guest', password: 'guest', display_name:"Guest")
